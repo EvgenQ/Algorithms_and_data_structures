@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace HW_2
 {
-	public class TwoLinkedList<T> : ILinkedList
-		where T: Node
+	public class TwoLinkedList : ILinkedList
 	{
 		public int Count { get; set; }
 		public Node Head { get; set; }
@@ -41,59 +40,32 @@ namespace HW_2
 			else
 			{
 				AddNodeNext(node.NextNode, value);
-
 			}
 			return node;
 		}
 		public void AddNodeAfter(Node node, int value)
 		{
-			WatchingNode(Head,node,value);
-		}
-		/// <summary>
-		/// 
-		/// </summary>
-		/// <param name="listNodes">Предпологаемый список нод</param>
-		/// <param name="addNode">нода которую хотим добавить</param>
-		/// <param name="value">После какого значения добавиться нода</param>
-		/// <returns></returns>
-		private Node WatchingNode(Node listNodes,Node addNode,int value) 
-		{
-			if (listNodes.Value == value)
-			{
-				addNode.NextNode = listNodes.NextNode;
-				listNodes.NextNode.PrevNode = addNode;
-				listNodes.NextNode = addNode;
-				addNode.PrevNode = listNodes;
-				return listNodes;
-			}
-			else 
-			{
-				WatchingNode(listNodes.NextNode, addNode, value);
-			}
-			return listNodes;
-		}
-
+			Node searchValue = FindNode(value);
+			node.NextNode = searchValue.NextNode;
+			searchValue.NextNode.PrevNode = node;
+			searchValue.NextNode = node;
+			node.PrevNode = searchValue;
+			Count++;
+		}		
 		public Node FindNode(int searchValue)
 		{
-			return FindNode(Head,searchValue);
+			Node searchNodeValue = Head;
+			while (searchNodeValue.Value != searchValue)
+			{
+				if (searchNodeValue.NextNode == null) 
+				{
+					Console.WriteLine($"Node {searchValue} was not found");
+					return searchNodeValue;
+				}
+				searchNodeValue = searchNodeValue.NextNode;
+			}
+			return searchNodeValue;
 		}
-		private Node FindNode(Node node,int value) 
-		{
-			if (node.Value == value)
-			{
-				Console.WriteLine($"Node {node.Value} was found");
-			}
-			else if (node.NextNode == null)
-			{
-				Console.WriteLine($"Node {value} not was found");
-			}
-			else 
-			{
-				FindNode(node.NextNode, value);
-			}
-			return node;
-		}
-
 		public int GetCount()
 		{
 			return Count;
@@ -101,12 +73,36 @@ namespace HW_2
 
 		public void RemoveNode(int index)
 		{
-			throw new NotImplementedException();
+			int indexNode = 0;
+			Node searchNodeValue = Head;
+			while (indexNode != index)
+			{
+				searchNodeValue = searchNodeValue.NextNode;
+				indexNode++;
+				if (searchNodeValue == null) 
+				{
+					throw new IndexOutOfRangeException("Индекс вышел за пределы границы");
+				}
+			}
+			RemoveNode(searchNodeValue);
+			
 		}
 
 		public void RemoveNode(Node node)
 		{
-			
+			if (node == Head) 
+			{
+				Head = node.NextNode;
+			}
+			else
+			{
+				node.PrevNode.NextNode = node.NextNode;
+				if (node.NextNode != null) 
+				{
+					node.NextNode.PrevNode = node.PrevNode;
+				}
+			}
+			Count--;
 		}
 
 
