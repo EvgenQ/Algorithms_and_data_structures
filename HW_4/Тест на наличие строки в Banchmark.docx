@@ -1,0 +1,76 @@
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\HW_4.Bencmark-report.csv
+  BenchmarkDotNet.Artifacts\results\HW_4.Bencmark-report-github.md
+  BenchmarkDotNet.Artifacts\results\HW_4.Bencmark-report.html
+
+// * Detailed results *
+Bencmark.'Тест массива': DefaultJob
+Runtime = .NET 5.0.7 (5.0.721.25508), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 342.044 us, StdErr = 1.896 us (0.55%), N = 40, StdDev = 11.994 us
+Min = 321.549 us, Q1 = 334.286 us, Median = 340.614 us, Q3 = 347.663 us, Max = 380.363 us
+IQR = 13.376 us, LowerFence = 314.222 us, UpperFence = 367.727 us
+ConfidenceInterval = [335.296 us; 348.791 us] (CI 99.9%), Margin = 6.748 us (1.97% of Mean)
+Skewness = 0.94, Kurtosis = 3.97, MValue = 2
+-------------------- Histogram --------------------
+[316.946 us ; 323.734 us) | @
+[323.734 us ; 331.814 us) | @@@@@@
+[331.814 us ; 341.020 us) | @@@@@@@@@@@@@@@@
+[341.020 us ; 351.228 us) | @@@@@@@@@@
+[351.228 us ; 365.296 us) | @@@@@@
+[365.296 us ; 375.760 us) |
+[375.760 us ; 384.966 us) | @
+---------------------------------------------------
+
+Bencmark.'Тест Хешсета': DefaultJob
+Runtime = .NET 5.0.7 (5.0.721.25508), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 189.646 us, StdErr = 0.998 us (0.53%), N = 28, StdDev = 5.283 us
+Min = 178.447 us, Q1 = 188.188 us, Median = 190.386 us, Q3 = 192.561 us, Max = 200.400 us
+IQR = 4.373 us, LowerFence = 181.628 us, UpperFence = 199.121 us
+ConfidenceInterval = [185.962 us; 193.330 us] (CI 99.9%), Margin = 3.684 us (1.94% of Mean)
+Skewness = -0.55, Kurtosis = 2.87, MValue = 2
+-------------------- Histogram --------------------
+[177.791 us ; 182.358 us) | @@@@
+[182.358 us ; 188.037 us) | @@@
+[188.037 us ; 192.604 us) | @@@@@@@@@@@@@@
+[192.604 us ; 197.473 us) | @@@@@@
+[197.473 us ; 202.684 us) | @
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19042.1288 (20H2/October2020Update)
+Intel Core i5-9300H CPU 2.40GHz, 1 CPU, 8 logical and 4 physical cores
+.NET SDK=5.0.301
+  [Host]     : .NET 5.0.7 (5.0.721.25508), X64 RyuJIT  [AttachedDebugger]
+  DefaultJob : .NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+
+
+|         Method |     Mean |   Error |   StdDev |
+|--------------- |---------:|--------:|---------:|
+| 'Тест массива' | 342.0 us | 6.75 us | 11.99 us |
+| 'Тест Хешсета' | 189.6 us | 3.68 us |  5.28 us |
+
+// * Warnings *
+Environment
+  Summary -> Benchmark was executed with attached debugger
+
+// * Hints *
+Outliers
+  Bencmark.'Тест массива': Default -> 5 outliers were removed (406.83 us..499.57 us)
+  Bencmark.'Тест Хешсета': Default -> 5 outliers were removed, 8 outliers were detected (178.45 us..179.58 us, 208.75 us..236.19 us)
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  1 us   : 1 Microsecond (0.000001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:01:37 (97.66 sec), executed benchmarks: 2
+
+Global total time: 00:01:59 (119.06 sec), executed benchmarks: 2
+// * Artifacts cleanup *

@@ -1,0 +1,156 @@
+
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\HW_3.BenchmarkClass-report.csv
+  BenchmarkDotNet.Artifacts\results\HW_3.BenchmarkClass-report-github.md
+  BenchmarkDotNet.Artifacts\results\HW_3.BenchmarkClass-report.html
+
+// * Detailed results *
+BenchmarkClass.'Расстояние через классы float': DefaultJob
+Runtime = .NET 5.0.7 (5.0.721.25508), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 85.838 ns, StdErr = 0.502 ns (0.59%), N = 67, StdDev = 4.113 ns
+Min = 79.714 ns, Q1 = 82.796 ns, Median = 84.828 ns, Q3 = 87.970 ns, Max = 95.507 ns
+IQR = 5.174 ns, LowerFence = 75.036 ns, UpperFence = 95.731 ns
+ConfidenceInterval = [84.108 ns; 87.569 ns] (CI 99.9%), Margin = 1.731 ns (2.02% of Mean)
+Skewness = 0.65, Kurtosis = 2.45, MValue = 2
+-------------------- Histogram --------------------
+[78.385 ns ; 80.537 ns) | @@@@
+[80.537 ns ; 83.483 ns) | @@@@@@@@@@@@@@@@@@
+[83.483 ns ; 86.141 ns) | @@@@@@@@@@@@@@@@@@@@@
+[86.141 ns ; 90.365 ns) | @@@@@@@@@@@
+[90.365 ns ; 93.023 ns) | @@@@@@@@@@
+[93.023 ns ; 96.201 ns) | @@@
+---------------------------------------------------
+
+BenchmarkClass.'Расстояние через классы double': DefaultJob
+Runtime = .NET 5.0.7 (5.0.721.25508), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 44.914 ns, StdErr = 0.167 ns (0.37%), N = 13, StdDev = 0.603 ns
+Min = 43.823 ns, Q1 = 44.743 ns, Median = 44.968 ns, Q3 = 45.334 ns, Max = 45.740 ns
+IQR = 0.591 ns, LowerFence = 43.856 ns, UpperFence = 46.220 ns
+ConfidenceInterval = [44.192 ns; 45.636 ns] (CI 99.9%), Margin = 0.722 ns (1.61% of Mean)
+Skewness = -0.51, Kurtosis = 1.92, MValue = 2
+-------------------- Histogram --------------------
+[43.562 ns ; 44.602 ns) | @@@
+[44.602 ns ; 46.077 ns) | @@@@@@@@@@
+---------------------------------------------------
+
+BenchmarkClass.'Расстояние через структуры float': DefaultJob
+Runtime = .NET 5.0.7 (5.0.721.25508), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 31.481 ns, StdErr = 0.162 ns (0.51%), N = 15, StdDev = 0.628 ns
+Min = 30.608 ns, Q1 = 31.024 ns, Median = 31.386 ns, Q3 = 32.025 ns, Max = 32.285 ns
+IQR = 1.002 ns, LowerFence = 29.521 ns, UpperFence = 33.528 ns
+ConfidenceInterval = [30.810 ns; 32.152 ns] (CI 99.9%), Margin = 0.671 ns (2.13% of Mean)
+Skewness = -0.08, Kurtosis = 1.44, MValue = 2
+-------------------- Histogram --------------------
+[30.381 ns ; 31.049 ns) | @@@@
+[31.049 ns ; 31.881 ns) | @@@@@@@
+[31.881 ns ; 32.619 ns) | @@@@
+---------------------------------------------------
+
+BenchmarkClass.'Расстояние через структуры double': DefaultJob
+Runtime = .NET 5.0.7 (5.0.721.25508), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 16.041 ns, StdErr = 0.224 ns (1.40%), N = 95, StdDev = 2.186 ns
+Min = 13.569 ns, Q1 = 14.417 ns, Median = 15.352 ns, Q3 = 17.218 ns, Max = 22.232 ns
+IQR = 2.801 ns, LowerFence = 10.215 ns, UpperFence = 21.420 ns
+ConfidenceInterval = [15.279 ns; 16.803 ns] (CI 99.9%), Margin = 0.762 ns (4.75% of Mean)
+Skewness = 1.15, Kurtosis = 3.54, MValue = 2.05
+-------------------- Histogram --------------------
+[12.940 ns ; 13.800 ns) | @@@@
+[13.800 ns ; 15.058 ns) | @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+[15.058 ns ; 16.413 ns) | @@@@@@@@@@@@@@@@@@
+[16.413 ns ; 17.938 ns) | @@@@@@@@@@@@@@
+[17.938 ns ; 19.561 ns) | @@@@@@@@@@
+[19.561 ns ; 21.150 ns) | @@
+[21.150 ns ; 22.408 ns) | @@@@@
+---------------------------------------------------
+
+BenchmarkClass.'Квадрат расстояния через структуры float': DefaultJob
+Runtime = .NET 5.0.7 (5.0.721.25508), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 42.075 ns, StdErr = 0.447 ns (1.06%), N = 100, StdDev = 4.475 ns
+Min = 30.950 ns, Q1 = 40.223 ns, Median = 43.996 ns, Q3 = 44.730 ns, Max = 48.400 ns
+IQR = 4.507 ns, LowerFence = 33.463 ns, UpperFence = 51.491 ns
+ConfidenceInterval = [40.557 ns; 43.593 ns] (CI 99.9%), Margin = 1.518 ns (3.61% of Mean)
+Skewness = -1.18, Kurtosis = 3.19, MValue = 2.57
+-------------------- Histogram --------------------
+[29.685 ns ; 32.075 ns) | @@@@
+[32.075 ns ; 34.605 ns) | @@@@@@@@@@
+[34.605 ns ; 37.062 ns) | @@
+[37.062 ns ; 38.916 ns) | @@@
+[38.916 ns ; 41.446 ns) | @@@@@@@@@@@
+[41.446 ns ; 43.386 ns) | @@@@@@@@
+[43.386 ns ; 45.917 ns) | @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+[45.917 ns ; 48.525 ns) | @@@@@@@@
+---------------------------------------------------
+
+BenchmarkClass.'Квадрат расстояния через структуры double': DefaultJob
+Runtime = .NET 5.0.7 (5.0.721.25508), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 20.654 ns, StdErr = 0.142 ns (0.69%), N = 26, StdDev = 0.723 ns
+Min = 19.342 ns, Q1 = 20.200 ns, Median = 20.597 ns, Q3 = 20.962 ns, Max = 22.255 ns
+IQR = 0.762 ns, LowerFence = 19.056 ns, UpperFence = 22.105 ns
+ConfidenceInterval = [20.126 ns; 21.182 ns] (CI 99.9%), Margin = 0.528 ns (2.56% of Mean)
+Skewness = 0.54, Kurtosis = 2.79, MValue = 2
+-------------------- Histogram --------------------
+[19.021 ns ; 19.688 ns) | @
+[19.688 ns ; 20.358 ns) | @@@@@@@@
+[20.358 ns ; 20.999 ns) | @@@@@@@@@@@@
+[20.999 ns ; 21.627 ns) | @
+[21.627 ns ; 22.268 ns) | @@@@
+---------------------------------------------------
+
+BenchmarkClass.'Расстояние через структуры double (с приведением из float)': DefaultJob
+Runtime = .NET 5.0.7 (5.0.721.25508), X64 RyuJIT; GC = Concurrent Workstation
+Mean = 42.403 ns, StdErr = 0.119 ns (0.28%), N = 15, StdDev = 0.463 ns
+Min = 41.736 ns, Q1 = 42.047 ns, Median = 42.311 ns, Q3 = 42.600 ns, Max = 43.340 ns
+IQR = 0.553 ns, LowerFence = 41.218 ns, UpperFence = 43.429 ns
+ConfidenceInterval = [41.909 ns; 42.898 ns] (CI 99.9%), Margin = 0.495 ns (1.17% of Mean)
+Skewness = 0.61, Kurtosis = 2.24, MValue = 2
+-------------------- Histogram --------------------
+[41.490 ns ; 42.598 ns) | @@@@@@@@@@@
+[42.598 ns ; 43.586 ns) | @@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19042.1288 (20H2/October2020Update)
+Intel Core i5-9300H CPU 2.40GHz, 1 CPU, 8 logical and 4 physical cores
+.NET SDK=5.0.301
+  [Host]     : .NET 5.0.7 (5.0.721.25508), X64 RyuJIT  [AttachedDebugger]
+  DefaultJob : .NET 5.0.7 (5.0.721.25508), X64 RyuJIT
+
+
+|                                                       Method |     Mean |    Error |   StdDev |   Median |
+|------------------------------------------------------------- |---------:|---------:|---------:|---------:|
+|                              'Расстояние через классы float' | 85.84 ns | 1.731 ns | 4.113 ns | 84.83 ns |
+|                             'Расстояние через классы double' | 44.91 ns | 0.722 ns | 0.603 ns | 44.97 ns |
+|                           'Расстояние через структуры float' | 31.48 ns | 0.671 ns | 0.628 ns | 31.39 ns |
+|                          'Расстояние через структуры double' | 16.04 ns | 0.762 ns | 2.186 ns | 15.35 ns |
+|                   'Квадрат расстояния через структуры float' | 42.07 ns | 1.518 ns | 4.475 ns | 44.00 ns |
+|                  'Квадрат расстояния через структуры double' | 20.65 ns | 0.528 ns | 0.723 ns | 20.60 ns |
+| 'Расстояние через структуры double (с приведением из float)' | 42.40 ns | 0.495 ns | 0.463 ns | 42.31 ns |
+
+// * Warnings *
+Environment
+  Summary -> Benchmark was executed with attached debugger
+
+// * Hints *
+Outliers
+  BenchmarkClass.'Расстояние через классы float': Default             -> 3 outliers were removed (105.23 ns.                                                                                                                                 .106.13 ns)
+  BenchmarkClass.'Расстояние через классы double': Default            -> 2 outliers were removed (52.68 ns,                                                                                                                                  53.41 ns)
+  BenchmarkClass.'Расстояние через структуры float': Default          -> 1 outlier  was  removed (39.48 ns)
+  BenchmarkClass.'Расстояние через структуры double': Default         -> 5 outliers were removed (27.57 ns..                                                                                                                                 31.54 ns)
+  BenchmarkClass.'Квадрат расстояния через структуры float': Default  -> 10 outliers were detected (35.70 ns                                                                                                                                 ..38.09 ns)
+  BenchmarkClass.'Квадрат расстояния через структуры double': Default -> 3 outliers were removed (29.96 ns..                                                                                                                                 31.82 ns)
+
+// * Legends *
+  Mean   : Arithmetic mean of all measurements
+  Error  : Half of 99.9% confidence interval
+  StdDev : Standard deviation of all measurements
+  Median : Value separating the higher half of all measurements (50th percentile)
+  1 ns   : 1 Nanosecond (0.000000001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:05:47 (347.34 sec), executed benchmarks: 7
+
