@@ -13,7 +13,7 @@ namespace HW_8
 			{
 				arr[i] = rnd.Next(1, 100);
 			}
-			List<int> b = BucketSort(a);
+			List<int> b = BucketSort(arr);
             b.ForEach(n => Console.Write($"{n} "));
         }
 
